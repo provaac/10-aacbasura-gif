@@ -40,10 +40,6 @@ jobs:
           if [ -f .hidden-tests/requirements.txt ]; then pip install -r .hidden-tests/requirements.txt; fi
           pip install pytest
 
-      - name: Debug: list hidden tests dir
-        run: |
-          echo "Files under .hidden-tests (maxdepth 4):"
-          find .hidden-tests -maxdepth 4 -type f | sort || true
 
       - name: Run hidden tests (auto-discovery)
         run: |
