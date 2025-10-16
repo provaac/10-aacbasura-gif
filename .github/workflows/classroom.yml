@@ -33,10 +33,5 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Debug: list hidden tests dir
-        run: |
-          echo "Files under .hidden-tests (maxdepth 4):"
-          find .hidden-tests -maxdepth 4 -type f | sort || true
-
       - name: Autograding
         uses: education/autograding@v1
